@@ -1,0 +1,9 @@
+# Working notes
+outline.txt
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

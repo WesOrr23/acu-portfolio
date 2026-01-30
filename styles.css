@@ -1,0 +1,375 @@
+/* Reset Default Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Hellix, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    color: #111235;
+    transition: 0.3s ease all;
+}
+
+/* Mobile Styles */
+
+html {
+    min-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(7.28deg, #EEF5FF 0%, #FFFFFF 99.69%);
+}
+
+.desktop {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 64px;
+    max-height: 75px;
+    height: 25vw;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 1.75rem;
+}
+
+.bold {
+    display: inline-block;
+    font-weight: 800;
+}
+
+.bold:hover {
+    transform: scale(1.05);
+}
+
+.left {
+    transform-origin: left;
+}
+
+.right {
+    transform-origin: right;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 60px 20px;
+    margin-bottom: 40px;
+}
+
+#headshot {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 1%;
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 30px rgba(75, 80, 146, 0.2);
+    border: 4px solid #FFFFFF;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #4B5092;
+}
+
+/* Section Headers */
+
+.section-header {
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+}
+
+/* Artifact Cards */
+
+.artifact {
+    margin: 40px auto;
+    padding: 40px 30px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.artifact.accent-background {
+    background: linear-gradient(135deg, #F2F8FF 0%, #E4F0FF 100%);
+}
+
+.artifact.reflection-artifact {
+    background: #FFFFFF;
+}
+
+.reflection {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.artifact-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111235;
+}
+
+.artifact-meta {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4B5092;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.description {
+    margin: 20px 0;
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #2d3142;
+}
+
+.reflection {
+    margin: 20px 0;
+    line-height: 1.7;
+    font-size: 1rem;
+    padding-left: 20px;
+    border-left: 4px solid #4B5092;
+    color: #111235;
+}
+
+.placeholder {
+    margin: 20px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    font-style: italic;
+    color: #6487BF;
+}
+
+/* Typography */
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    width: 90%;
+    margin: 80px auto 40px auto;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(75, 80, 146, 0.2);
+}
+
+#footer-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#tagline {
+    font-size: 1rem;
+    color: #4B5092;
+    margin: 10px 0;
+}
+
+#copyright {
+    font-size: 0.875rem;
+    margin-top: 30px;
+    color: #6487BF;
+}
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 668px) and (max-width: 1075px) {
+    main {
+        max-width: 900px;
+        padding: 30px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .artifact {
+        padding: 50px 40px;
+    }
+
+    .artifact-content h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 1075px) {
+    .desktop {
+        display: initial !important;
+    }
+
+    .mobile {
+        display: none !important;
+    }
+
+    header {
+        justify-content: space-between;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    header h1 {
+        font-size: 2.25rem;
+    }
+
+    #top-nav {
+        width: 400px;
+    }
+
+    #top-nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    #top-nav a {
+        cursor: pointer;
+        font-weight: 600;
+        color: #4B5092;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    #top-nav a:hover {
+        background: #F2F8FF;
+        transform: translateY(-2px);
+    }
+
+    main {
+        max-width: 1100px;
+        padding: 40px;
+    }
+
+    #hero {
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        padding: 100px 40px 80px 40px;
+    }
+
+    #headshot {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 0;
+    }
+
+    #hero .container {
+        text-align: left;
+        max-width: 650px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+    .artifact {
+        padding: 60px 50px;
+        margin: 50px auto;
+    }
+
+    .artifact-content h3 {
+        font-size: 2.25rem;
+    }
+
+    .description, .reflection {
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+
+    footer {
+        width: 80%;
+    }
+
+    #footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Super Large Desktop Styles */
+
+@media only screen and (min-width: 1400px) {
+    main {
+        max-width: 1200px;
+    }
+
+    .artifact {
+        padding: 70px 60px;
+    }
+}
+
+/* Smooth Scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Accessibility */
+
+a:focus, button:focus {
+    outline: 2px solid #4B5092;
+    outline-offset: 2px;
+}
