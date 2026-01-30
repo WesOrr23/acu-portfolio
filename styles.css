@@ -67,6 +67,16 @@ header h1 {
     font-size: 1.75rem;
 }
 
+.name-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.name-link:hover {
+    opacity: 0.7;
+}
+
 .bold {
     display: inline-block;
     font-weight: 800;
