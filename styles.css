@@ -123,10 +123,6 @@ main {
     background: linear-gradient(135deg, #F2F8FF 0%, #E4F0FF 100%);
 }
 
-.artifact.reflection-artifact {
-    background: #FFFFFF;
-}
-
 .reflection {
     background: rgba(255, 255, 255, 0.7);
     padding: 30px;
