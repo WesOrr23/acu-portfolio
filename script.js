@@ -1,3 +1,30 @@
+// Auto-hide header on scroll
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const scrollThreshold = 100; // Start hiding after scrolling 100px
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Don't hide if near top of page
+    if (scrollTop < scrollThreshold) {
+        header.classList.remove('hidden');
+        return;
+    }
+
+    // Scrolling down - hide header
+    if (scrollTop > lastScrollTop) {
+        header.classList.add('hidden');
+    }
+    // Scrolling up - show header
+    else {
+        header.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop;
+});
+
 // Interactive collapsible artifact cards
 
 document.addEventListener('DOMContentLoaded', function() {
