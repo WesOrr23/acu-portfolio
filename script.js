@@ -1,3 +1,8 @@
+// Create progress bar
+const progressBar = document.createElement('div');
+progressBar.className = 'progress-bar';
+document.body.insertBefore(progressBar, document.body.firstChild);
+
 // Auto-hide header on scroll
 
 let lastScrollTop = 0;
@@ -6,6 +11,13 @@ const scrollThreshold = 100; // Start hiding after scrolling 100px
 
 window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Update progress bar
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollableDistance = documentHeight - windowHeight;
+    const scrollPercentage = (scrollTop / scrollableDistance) * 100;
+    progressBar.style.width = scrollPercentage + '%';
 
     // Don't hide if near top of page
     if (scrollTop < scrollThreshold) {
@@ -16,10 +28,12 @@ window.addEventListener('scroll', function() {
     // Scrolling down - hide header
     if (scrollTop > lastScrollTop) {
         header.classList.add('hidden');
+        progressBar.classList.add('header-hidden');
     }
     // Scrolling up - show header
     else {
         header.classList.remove('hidden');
+        progressBar.classList.remove('header-hidden');
     }
 
     lastScrollTop = scrollTop;

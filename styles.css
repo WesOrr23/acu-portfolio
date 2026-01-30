@@ -45,6 +45,24 @@ header.hidden {
     transform: translateY(-100%);
 }
 
+/* Reading Progress Bar */
+
+.progress-bar {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #BAD5FF 0%, #6487BF 100%);
+    width: 0%;
+    z-index: 99;
+    transition: width 0.1s ease, top 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(100, 135, 191, 0.3);
+}
+
+.progress-bar.header-hidden {
+    top: 0;
+}
+
 header h1 {
     font-size: 1.75rem;
 }
@@ -419,6 +437,11 @@ footer {
         padding-left: 8%;
         padding-right: 8%;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+        min-height: 75px;
+    }
+
+    .progress-bar {
+        top: 75px;
     }
 
     header h1 {
